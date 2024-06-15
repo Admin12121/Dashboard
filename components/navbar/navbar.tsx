@@ -42,14 +42,14 @@ export const NavbarWrapper = ({ children }: Props) => {
           justify="end"
           className="w-fit data-[justify=end]:flex-grow-0"
         >
-          {/* <Link
-            href="https://github.com/Siumauricio/nextui-dashboard-template"
-            target={"_blank"}
-            >
-            <GithubIcon />
-            </Link> */}
           <ToggleButton />
           <NotificationsDropdown />
+          <Link
+            href="https://github.com/Admin12121/Dashboard"
+            target={"_blank"}
+          >
+            <GithubIcon />
+          </Link>
           <NavbarContent>
             <UserDropdown />
           </NavbarContent>

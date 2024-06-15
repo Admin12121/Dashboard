@@ -14,7 +14,7 @@ export const NotificationsDropdown = () => {
   return (
     <Dropdown  placement="bottom-end">
       <DropdownTrigger>
-        <NavbarItem className="cursor-pointer">
+        <NavbarItem className="cursor-pointer flex items-center">
           <Badge content="" color="secondary" shape="circle" placement="top-right">
             <NotificationIcon />
           </Badge>

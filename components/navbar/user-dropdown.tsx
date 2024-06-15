@@ -38,7 +38,7 @@ export const UserDropdown = () => {
           className="flex flex-col justify-start w-full items-start"
         >
           <p>Signed in as</p>
-          <p>zoey@example.com</p>
+          <p>admin@gmail.com</p>
         </DropdownItem>
         <DropdownItem key="settings">Settings</DropdownItem>
         <DropdownItem key="help_and_feedback">Help & Feedback</DropdownItem>
