@@ -1,6 +1,5 @@
 import { Card, CardBody } from "@nextui-org/react";
 import React from "react";
-import { Community } from "../icons/community";
 import RevinueIcon from "../icons/revinue-Icon";
 
 export const CardBalance3 = () => {

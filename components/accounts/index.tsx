@@ -1,6 +1,5 @@
 "use client";
 import { Button, Input } from "@nextui-org/react";
-import Link from "next/link";
 import React from "react";
 import { TableWrapper } from "@/components/table/table";
 import { AddUser } from "./add-user";

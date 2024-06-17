@@ -1,7 +1,7 @@
 import { Card, CardBody } from "@nextui-org/react";
 import React from "react";
 import { Community } from "../icons/community";
-import {Avatar, AvatarGroup} from "@nextui-org/react";
+import {Avatar, AvatarGroup} from "@nextui-org/avatar";
 
 export const CardBalance1 = () => {
   return (

@@ -1,55 +1,51 @@
 import "@/styles/globals.css";
-import type { Metadata } from 'next';
-import { Providers } from "./providers";
-import { fontSans } from '@/config/fonts';
+import { Metadata, Viewport } from "next";
 import clsx from "clsx";
 
-export const metadata: Metadata = {
-  title: 'E-commerce Dashboard Template',
-  description: 'A comprehensive and modern e-commerce dashboard template with advanced features and an intuitive user interface.',
-  keywords: 'e-commerce, dashboard, template, admin panel, responsive, modern design',
-  authors: [{ name: 'Vicky Tajpuriya'}],
-  robots: 'index, follow',
-  openGraph: {
-    title: 'E-commerce Dashboard Template',
-    description: 'A comprehensive and modern e-commerce dashboard template with advanced features and an intuitive user interface.',
-    type: 'website',
-    siteName: "Ecommerse-Dashboard",
-    url: "https://dashboard.biki.com.np",
-    images: [
-      {
-        url: 'https://dashboard.biki.com.np/og.jpeg', // Must be an absolute URL
-        width: 800,
-        height: 600,
-      },
-      {
-        url: 'https://dashboard.biki.com.np/og.jpeg', // Must be an absolute URL
-        width: 1800,
-        height: 1600,
-        alt: 'My custom alt',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'E-commerce Dashboard Template',
-    description: 'A comprehensive and modern e-commerce dashboard template with advanced features and an intuitive user interface.',
-  }
-}
+import { Providers } from "./providers";
 
+import { siteConfig } from "@/config/site";
+import { fontSans } from "@/config/fonts";
+
+
+export const metadata: Metadata = {
+  title: {
+    default: siteConfig.name,
+    template: `%s - ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={clsx("font-sans antialiased", fontSans.className)}>
-        <Providers>
+    <html suppressHydrationWarning lang="en">
+      <head />
+      <body
+        className={clsx(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.variable
+        )}
+      >
+        <Providers
+          themeProps={{ attribute: "class", defaultTheme: "dark", children }}
+        >
           {children}
         </Providers>
       </body>
     </html>
-  )
+  );
 }
