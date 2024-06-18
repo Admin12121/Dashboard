@@ -12,7 +12,7 @@ import {
 } from "@nextui-org/react";
 import { Input, Textarea } from "@nextui-org/input";
 import { useRouter } from "next/navigation";
-const page = () => {
+const Page = () => {
   const [selectedKeys, setSelectedKeys] = useState(new Set(["text"]));
   const router = useRouter();
   const selectedValue = useMemo(
@@ -142,4 +142,4 @@ export const animals = [
   { key: "fullgold", label: "Full gold" },
 ];
 
-export default page;
+export default Page;
