@@ -20,6 +20,7 @@
 		"@tsparticles/slim": "^3.4.0",
 		"apexcharts": "^3.49.1",
 		"axios": "^1.7.2",
+		"autoprefixer": "10.4.19",
 		"cookie": "^0.6.0",
 		"framer-motion": "^11.2.0",
 		"gsap": "^3.12.5",
