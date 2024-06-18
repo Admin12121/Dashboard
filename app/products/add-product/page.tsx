@@ -4,21 +4,11 @@ import { Button } from "@nextui-org/button";
 import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import { Breadcrumbs, BreadcrumbItem } from "@nextui-org/breadcrumbs";
 import { Select, SelectItem } from "@nextui-org/react";
-import {
-  Dropdown,
-  DropdownTrigger,
-  DropdownMenu,
-  DropdownItem,
-} from "@nextui-org/react";
 import { Input, Textarea } from "@nextui-org/input";
 import { useRouter } from "next/navigation";
-const Page = () => {
-  const [selectedKeys, setSelectedKeys] = useState(new Set(["text"]));
+const AddProduct = () => {
   const router = useRouter();
-  const selectedValue = useMemo(
-    () => Array.from(selectedKeys).join(", ").replaceAll("_", " "),
-    [selectedKeys]
-  );
+
   return (
     <>
       <div className="flex flex-col gap-5 px-5 pb-5 h-[90vh] scroll">
@@ -135,11 +125,11 @@ const Page = () => {
   );
 };
 
-export const animals = [
+const animals = [
   { key: "brass", label: "Brass" },
   { key: "silver", label: "Silver" },
   { key: "halfgold", label: "Half Gold" },
   { key: "fullgold", label: "Full gold" },
 ];
 
-export default Page;
+export default AddProduct;
